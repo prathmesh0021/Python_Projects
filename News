@@ -1,0 +1,74 @@
+Python News Aggregator (Tkinter Desktop App)
+
+This is a simple desktop application built with Python and the Tkinter library that allows users to search for news articles on a specific topic using the News API. The application displays the title and description, and allows the user to click on any title to open the full article in their web browser.
+
+🚀 Features
+
+Search Functionality: Fetches recent news articles based on a user-defined keyword query.
+
+Interactive Display: Displays news titles (in bold cyan) and descriptions.
+
+Clickable Headlines: Headlines are clickable; clicking a title opens the full article URL in the default web browser.
+
+Real-time Cursor Change: The cursor changes to a hand icon (hand2) when hovering over a clickable headline, providing a clear visual cue.
+
+Responsive UI: Uses a ScrolledText widget for comfortable viewing of multiple articles.
+
+📋 Prerequisites
+
+You need the following installed to run this application:
+
+Python 3.x
+
+Tkinter: Usually bundled with standard Python installations.
+
+A News API Key from newsapi.org.
+
+⚙️ Setup and Installation
+
+1. Dependencies
+
+You only need the requests library, as tkinter, json, and webbrowser are typically standard in Python.
+
+Open your terminal or command prompt and run:
+
+pip install requests
+
+
+2. API Key Configuration
+
+The News API key is hardcoded in the provided script. For security and best practice, you should replace the placeholder key with your own valid key.
+
+Locate the fetch_news function in the script and update the url variable.
+
+# Original line in the script:
+# url = (f"[https://newsapi.org/v2/everything?q=apple&from=2025-11-03&to=2025-11-03&sortBy=popularity&apiKey=b39f734639ba49c498f06705c2bc05fd](https://newsapi.org/v2/everything?q=apple&from=2025-11-03&to=2025-11-03&sortBy=popularity&apiKey=b39f734639ba49c498f06705c2bc05fd)")
+
+# IMPORTANT: Replace YOUR_API_KEY_HERE with your actual key.
+url = (f"[https://newsapi.org/v2/everything?q=](https://newsapi.org/v2/everything?q=){query}&sortBy=publishedAt&apiKey=YOUR_API_KEY_HERE")
+
+
+▶️ How to Run
+
+Save the Python code as a single file (e.g., news_app.py).
+
+Open your terminal or command prompt.
+
+Navigate to the directory where you saved the file.
+
+Run the application using Python:
+
+python news_app.py
+
+
+The desktop application window will open.
+
+📝 Usage
+
+Enter a Topic: Type the news topic you are interested in (e.g., "SpaceX", "Electric Vehicles", "Global Economy") into the text entry box.
+
+Click "Get News": The application will fetch the latest articles related to your query.
+
+Browse Results: Scroll through the list of titles and descriptions.
+
+Read an Article: Click on any headline (the blue-green colored text) to open the source article in your web browser.
